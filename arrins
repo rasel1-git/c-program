@@ -1,0 +1,24 @@
+//insert new element
+#include<stdio.h>
+int main(){
+int a[40],pos=0,i,n,value;
+printf("enter no of elements in array of as:");
+scanf("%d",&n);
+printf("enter %d elements are:",n);
+for(i=0;i<n;i++)
+scanf("%d",&a[i]);
+printf("\n After traversing .....\n");
+for(i=0;i<n;i++)
+printf("%4d\n",a[i]);
+printf("enter the position where you want to insert the element:");
+scanf("%d",&pos);
+printf("enter the value into that poition:");
+scanf("%d",&value);
+for(i=n-1;i>=pos-1;i--)
+a[i+1]=a[i];
+a[pos-1]= value;
+printf("final array after inserting the value is");
+for(i=0;i<=n;i++)
+printf("%4d",a[i]);
+return 0;
+}
